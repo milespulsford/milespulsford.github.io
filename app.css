@@ -1,23 +1,24 @@
+body {
+	background-color: #114B5F;
+}
+
 div#header {
 	width: 960px;
-	margin: 24px;
-	padding: 24px;
+	margin: auto;
+	padding: 48px;
 	background-color: #F5F3EE;
 	font-size: 22px;
 }
 
 div#charts {
 	width: 960px;
-	margin: 24px;
+	margin: auto;
 	padding: 24px;
 	background-color: #F5F3EE;
-	font-size: 16px;
-}
-
-p {
-	margin-bottom:1.5em
+	font-size: 18px;
 }
 
 img {
 	width: 100%;
+	margin-bottom: 3em;
 }
