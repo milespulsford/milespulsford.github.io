@@ -1,12 +1,19 @@
-div {
-	width: 600px;
-	margin: 10px;
-	padding: 15px;
+div#header {
+	width: 1200px;
+	margin: 25px;
+	padding: 25px;
 	background-color: #F5F3EE;
+	p {
+		font-size: 16px;
+	}
 }
 
-
+div#charts {
+	p {
+		font-size: 11px;
+	}
+}
 
 img {
-	width: 100%;
+	width: 900px;
 }
