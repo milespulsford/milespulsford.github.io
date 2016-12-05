@@ -3,9 +3,6 @@ div#header {
 	margin: 25px;
 	padding: 25px;
 	background-color: #F5F3EE;
-	p {
-		font-size: 16px;
-	}
 }
 
 div#charts {
@@ -13,9 +10,7 @@ div#charts {
 	margin: 25px;
 	padding: 25px;
 	background-color: #F5F3EE;
-	p {
-		font-size: 11px;
-	}
+	font-size: 11px;
 }
 
 img {
