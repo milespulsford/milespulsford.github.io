@@ -9,6 +9,10 @@ div#header {
 }
 
 div#charts {
+	width: 1200px;
+	margin: 25px;
+	padding: 25px;
+	background-color: #F5F3EE;
 	p {
 		font-size: 11px;
 	}
