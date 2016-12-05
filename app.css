@@ -4,18 +4,20 @@ body {
 
 div#header {
 	width: 960px;
+	padding: 32px;
+	font-size: 20px;
+	color: #F5F3EE;
 	margin: auto;
-	padding: 48px;
-	background-color: #F5F3EE;
-	font-size: 22px;
+	font-family: "Gill Sans MT";
 }
 
 div#charts {
 	width: 960px;
-	margin: auto;
-	padding: 48px;
+	padding: 32px;
 	background-color: #F5F3EE;
-	font-size: 18px;
+	font-size: 16px;
+	margin: auto;
+	font-family: "Gill Sans MT";
 }
 
 img {
