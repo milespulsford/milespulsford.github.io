@@ -19,7 +19,7 @@ em {
 div#sidebar {
 	width: 260px;
 	padding: 32px;
-	font-size: 20px;
+	font-size: 18px;
 	color: #F5F3EE;
 	margin: auto;
 	font-family: "Gill Sans MT";
@@ -28,15 +28,15 @@ div#sidebar {
 }
 
 div#all {
-	width: 1320px;
+	width: 1024px;
 	float: left;
 }
 
 div#charts {
-	width: 928px;
+	width: 636px;
 	padding: 32px;
 	background-color: #F5F3EE;
-	font-size: 16px;
+	font-size: 14px;
 	margin: auto;
 	font-family: "Gill Sans MT";
 	float: right;
