@@ -62,7 +62,7 @@ race_data$race <- factor(race_data$race, levels = rev(c('White', 'Asian', 'Latin
                                                         'Other')))
 
 race_chart <- ggplot(na.omit(race_data), aes(x = race, fill = gender)) +
-  geom_bar(position = 'dodge') +
+  geom_bar(position = 'dodge', alpha = 0.8, color = '#333333') +
   labs(title = 'Race of Participants', x = 'Race', y = 'Participants') +
   scale_fill_manual(values = c('#7D1935', '#114B5F')) +
   coord_flip() +
@@ -83,8 +83,8 @@ career_data$career_c <- x5[match(career_data$career_c, c(1, 2, 3, 4, 5, 6, 7, 8,
                                                          12, 13, 14, 15, 16, 17))]
 
 career_chart <- ggplot(na.omit(career_data), aes(x = gender, fill = career_c)) +
-  geom_bar() +
-  labs(title = 'What is your intended career?', x = 'Career Field', y = 'Participants') +
+  geom_bar(width = 0.5, alpha = 0.8, color = '#333333', size = 0.5) +
+  labs(title = 'What is your intended career?', x = 'Gender', y = 'Participants') +
   scale_fill_manual(values = c('#77878B', '#7D1935', '#114B5F')) +
   coord_flip() +
   miles_theme
@@ -118,7 +118,7 @@ effort_data <- left_join(effort_data_1, effort_data_2, c('iid' = 'iid'))
 effort_data$effort <- factor(effort_data$effort, levels = c(7, 6, 5, 4, 3, 2, 1))
 
 effort_chart <- ggplot(na.omit(effort_data), aes(x = effort, y = (100*success))) +
-  geom_jitter(width = 0.2, color = '#114B5F') +
+  geom_jitter(size = 2, width = 0.2, color = '#114B5F', alpha = 0.5) +
   geom_boxplot(outlier.size = 0, outlier.stroke = 0, alpha = 0, color = '#7D1935',
                coef = 0, size = 1, width = 0.4) +
   labs(title = 'Does Effort Affect Success?', 
@@ -151,56 +151,6 @@ mutual_chart <- ggplot(mutual_data, aes(x = reciprocity, y = gender, fill = perc
   scale_fill_gradient(low = '#CFABB5', high = '#7D1935') +
   miles_theme
 
-self_data <- dating_data %>%
-  select(iid, attr3_1, sinc3_1, intel3_1, fun3_1, amb3_1) %>%
-  unique() %>%
-  mutate(attr = ifelse(((attr3_1 >= sinc3_1) & (attr3_1 >= intel3_1) & (attr3_1 >= fun3_1) &
-                          (attr3_1 >= amb3_1)), 1, (0))) %>%
-  mutate(sinc = ifelse(((sinc3_1 >= attr3_1) & (sinc3_1 >= intel3_1) & (sinc3_1 >= fun3_1) &
-                          (sinc3_1 >= amb3_1)), 1, (0))) %>%
-  mutate(intel = ifelse(((intel3_1 >= sinc3_1) & (intel3_1 >= attr3_1) &
-                           (intel3_1 >= fun3_1) & (intel3_1 >= amb3_1)), 1, (0))) %>%
-  mutate(fun = ifelse(((fun3_1 >= sinc3_1) & (fun3_1 >= intel3_1) & (fun3_1 >= attr3_1) &
-                         (fun3_1 >= amb3_1)), 1, (0))) %>%
-  mutate(amb = ifelse(((amb3_1 >= sinc3_1) & (amb3_1 >= intel3_1) & (amb3_1 >= fun3_1) &
-                         (amb3_1 >= attr3_1)), 1, (0))) %>%
-  select(attr, sinc, intel, fun, amb) %>%
-  gather(quality, value)
-
-self_data <- summarize(group_by(na.omit(self_data), quality), self = mean(value))
-
-self_2 <- dating_data %>%
-  select(iid, attr_o, sinc_o, intel_o, fun_o, amb_o)
-
-self_2 <- summarize(group_by(na.omit(self_2), iid), attr_ = mean(attr_o),
-                    sinc_ = mean(sinc_o), intel_ = mean(intel_o), fun_ = mean(fun_o),
-                    amb_ = mean(amb_o)) %>%
-self_2 <- mutate(self_2, attr = ifelse(((attr_ >= sinc_) & (attr_ >= intel_) &
-                                          (attr_ >= fun_) & (attr_ >= amb_)), 1, (0))) %>%
-  mutate(sinc = ifelse(((sinc_ >= attr_) & (sinc_ >= intel_) & (sinc_ >= fun_) &
-                          (sinc_ >= amb_)), 1, (0))) %>%
-  mutate(intel = ifelse(((intel_ >= sinc_) & (intel_ >= attr_) & (intel_ >= fun_) &
-                           (intel_ >= amb_)), 1, (0))) %>%
-  mutate(fun = ifelse(((fun_ >= sinc_) & (fun_ >= intel_) & (fun_ >= attr_) &
-                         (fun_ >= amb_)), 1, (0))) %>%
-  mutate(amb = ifelse(((amb_ >= sinc_) & (amb_ >= intel_) & (amb_ >= fun_) &
-                         (amb_ >= attr_)), 1, (0))) %>%
-  select(attr, sinc, intel, fun, amb) %>%
-  gather(quality, value)
-
-self_2 <- summarize(group_by(na.omit(self_2), quality), others = mean(value))
-
-#self_data <- left_join(self_data, self_2, by = 'quality') %>%
-#  gather(person, value, -quality)
-
-#self_chart <- ggplot(self_data, aes(x = quality, y = value, fill = person)) +
-#  geom_bar(position = 'dodge', stat = 'identity') +
-#  labs(title = 'Race of Participants', x = 'Race', y = 'Participants') +
-#  scale_fill_manual(values = c('#7D1935', '#114B5F')) +
-#  coord_flip() +
-#  miles_theme
-
-print(career_chart)
 
 #ggsave('age_chart.pdf', age_chart)
 #ggsave('career_chart.pdf', career_chart)
