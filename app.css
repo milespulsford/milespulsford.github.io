@@ -2,24 +2,25 @@ body {
 	background-color: #114B5F;
 }
 
+h2 {
+  font-weight: bold;
+  color: #7D1935;
+  font-size: 24px;
+  text-align: center;
+}
+
 section {
-	font-size: 14px;
+	font-size: 16px;
 }
 
 header {
 	font-family: "Gill Sans MT";
 }
 
-em {
-    font-size: 16px;
-    font-style: normal;
-    text-decoration: underline;
-}
-
 div#sidebar {
 	width: 260px;
 	padding: 32px;
-	font-size: 18px;
+	font-size: 20px;
 	color: #F5F3EE;
 	margin: auto;
 	font-family: "Gill Sans MT";
@@ -28,23 +29,31 @@ div#sidebar {
 }
 
 div#all {
-	width: 1200px;
+	width: 1164px;
 	float: left;
 }
 
-div#charts {
-	width: 812px;
+div#main {
+	width: 776px;
 	padding: 32px;
 	background-color: #F5F3EE;
-	font-size: 14px;
+	font-size: 16px;
 	margin: auto;
 	font-family: "Gill Sans MT";
 	float: right;
 }
 
+div#text {
+	width: 700px;
+	padding: 0px;
+	background-color: #F5F3EE;
+	font-size: 16px;
+	margin: auto;
+	font-family: "Gill Sans MT";
+}
+
 img {
 	width: 100%;
-	margin-bottom: 3em;
 }
 
 a:link {

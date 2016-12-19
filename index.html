@@ -15,34 +15,82 @@
 			<br>
 		</header>
 		<section>
-			<p><em>Data:</em></p>
+			<hr><br>
 			<p>The data for this project comes from a Columbia Business School study conducted by Dr. Ray Fisman and Dr. Sheena Iyengar. The published study is available <a href="http://faculty.chicagobooth.edu/emir.kamenica/documents/racialpreferences.pdf">here</a>, and you can download the dataset <a href="http://www.stat.columbia.edu/~gelman/arm/examples/speed.dating/">here</a>.
+			<br>
 			<br>
 			<br>
 		</section>
 		<section>
-			<p><em>Resources:</em></p>
+			<hr><br>
 			<p><a href="https://github.com/milespulsford/milespulsford.github.io">My R code</a><br>
 			<a href="mailto:miles.pulsford@gmail.com">Contact me</a></p>
 		</div>
 
-		<div id="charts">
-			<section>
-			<h1>About the data</h1>
-			<p>From 2002-2004, two professors at Columbia Business School held experimental speed dating events. Attendees would sit down for a succession of four-minute dates with each participant of the opposite gender. After each date, participants rated their partner on six criteria and decided whether or not to "like" them. If two participants liked one another, they were given their partner's contact information so that they could follow up after the event.</p>
-			<p>Age of participants:</p>
-				<img src="./images/age_chart.png">
-			<p>Race of participants:</p>
-				<img src="./images/race_chart.png">
-			<p>Career breakdown:</p>
-				<img src="./images/career_chart.png">
-			<p>Turns out putting more effort into dating is correlated with	 success! Of course, it might be that people who find success in dating are more likely to keep doing it.</p>
-				<img src="./images/effort_chart.png">
-			<p>We are actually slightly LESS likely to be attracted to someone who is attracted to us!</p>
-				<img src="./images/mutual_chart.png">
-			<p>Attractive people are more selective, but not dramatically so:</p>
-				<img src="./images/pickiness_chart.png">
-			</section>
+		<div id="main">
+			
+			<hr><br>
+			<h2>About the data</h2>
+			<div id="text">
+				<p>From 2002-2004, two professors at Columbia Business School conducted experimental speed dating events. Attendees would sit down for a succession of four-minute dates with each participant of the opposite gender. After each date, participants rated their partner on six criteria and decided whether or not to "like" them. If two participants liked one another, they were given their partner's contact information so that they could follow up after the event.</p>
+				<p>Participants were also asked to fill out an extremely thorough survey, which contained questions about demographic information, dating habits, lifestyle information, romantic preferences, self-perception, and beliefs about the values of others. A similar survey was sent out the day after the event, as well as one month later.</p>
+				<p>The dating and survey results were compiled and organized into a dataset. The resulting file contains detailed information about 552 speed dating participants and their interactions during the events.</p>
+				<br>
+			</div>
+			<br><hr><br>
+
+			<h2>The participants</h2>
+			<div id="text">
+				<p>First, let's look at the people who attended the speed dating events. Here's a histogram showing the age breakdown of the participants, separated by gender:</p>
+			</div>
+			<img src="./images/age_chart.png">
+			<div id="text">
+				<p>As you can see, most of the speed daters were between the ages of 21 and 30. Women were slightly more likely to be in their early twenties, and there were more men in their late twenties and very early thirties. <i>(Note: two participants older than 40 have been omitted from this chart)</i>.</p><br>
+				<p>Next, we can examine the racial demographics of the speed dating pool:</p>
+			</div>
+			<img src="./images/race_chart.png">
+			<div id="text">
+				<p>More than half of the men in the study were white. There were also quite a few speed daters of Asian descent, and only a scattering of participants from other races. The women were slightly more diverse, but generally followed the same pattern. The survey also included a "Native American" option, but no participants of either gender selected it.</p><br>
+				<p>Finally, we will look at the career fields of the speed daters. Participants were asked "What is your intended career?" and their responses were coded into 17 categories, which included both an "Undecided" and "Other" option. Remarkably, two categories were significantly more popular than the rest:</p>
+			</div>
+			<img src="./images/career_chart.png">
+			<div id="text">
+				<p>Together, these charts reveal that these events were primarily attended by white twentysomethings working in business or research. Whether that is often true of speed dating or if it was simply because the events were advertised at Columbia University and held at a bar near campus is beyond the scope of my analysis, but I suspect the latter played a larger role.</p>
+				<p>Whatever the reason, it seems to me that the homogenous makeup of the participants raises questions about the conclusions of the original research study. Here's what they found:
+				<blockquote cite="http://faculty.chicagobooth.edu/emir.kamenica/documents/racialpreferences.pdf"><i>"Females exhibit stronger racial preferences than males. . . . Subjects' backgrounds, including the racial composition of the ZIP code where a subject grew up and the prevailing racial attitudes in a subject's state or country of origin, strongly influence same-race preferences. Older subjects and more physically attractive subjects exhibit weaker same-race preferences."</i></blockquote></p><br>
+				</div>
+				<br><hr><br>
+
+			<h2>My analysis</h2>
+			<div id="text">
+				<p>When thinking about how to approach this project, I decided to stay away from the traditional topics of attraction research (racial bias, age preference, most attractive qualities, etc.). Instead, I wanted to look at some deeper questions, and see if I could make some progress toward answering them.</p>
+				<p><b>My first question: Are we more attracted to people who are attracted to us?</b></p>
+				<p>To tackle this problem, I compared the percentage of likes given to people who returned the favor with the percentage of likes that went unrequited. Here's what I found:
+			</div>
+			<img src="./images/mutual_chart.png">
+			<div id="text">
+				<p>Interestingly, it turns out that participants were slightly more likely to like the partners that did not like them back. I guess we just want what we can't have.</p><br>
+				<p>Next, I looked at selectivity. <b>Are attractive people more picky when choosing potential partners?</b></p>
+				<p>For this one, I examined the relationship between physical attractiveness and number of partners liked. To estimate attractiveness, I averaged the "Attractiveness" ratings that each participant received from their date partners. I plotted the result for each participant against the percentage of partners that they liked, and created this scatter plot:</p>
+			</div>
+			<img src="./images/pickiness_chart.png">
+			<div id="text">
+				<p>It seems that attractive people are indeed more selective with their likes. People who received an average attractiveness rating of 4 liked about 60% of their partners, while people who received an average rating of 7 liked only just over 30% of their dates. Interestingly, the curve levels off after 7; people ranked 8 or higher were no more selective.</p><br>
+				<p>Finally, I examined effort. <b>Does going on more dates correlate with more romantic success?</b></p>
+				<p>This is a big question, and one that could certainly use more research. For my analysis, I compared the self-reported frequency that participants go on dates with their success at the speed dating events. To assess success, I used average match percentage. Here's a chart of the average match percentage for each speed dater, separated by their dating frequency:</p>
+			</div>
+			<img src="./images/effort_chart.png">
+			<div id="text">
+				<p>I found a weak connection between dating frequency and success. Of course, there could be quite a few reasons for this correlation, and proving causation would be tricky. Perhaps people who are more desirable consistently have more dating success, and so they enjoy dating more and do it more often. Or perhaps dating is a skill, and people who practice more have better results.</p>
+				<p>One interesting thing about this chart is the outliers. While the median match percentage only rose slightly with date frequency, the highest outliers were almost entirely people who date more often. If you want to have a wildly successful love life, you might have to put in a lot of effort.</p><br>
+			</div>
+			<br><hr><br>
+
+			<h2>Further study</h2>
+			<div id="text">
+				<p><i>Coming soon!</i></p><br>
+			</div>
+			<br><hr>
 		</div>
 	</div>
 </body>
