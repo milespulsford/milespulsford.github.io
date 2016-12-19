@@ -2,10 +2,14 @@ body {
 	background-color: #114B5F;
 }
 
+h1 {
+	font-size: 32px;
+}
+
 h2 {
   font-weight: bold;
   color: #7D1935;
-  font-size: 22px;
+  font-size: 24px;
   text-align: center;
 }
 
