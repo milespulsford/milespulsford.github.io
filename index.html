@@ -9,7 +9,7 @@
 	<div id="all">
 		<div id="sidebar">
 		<header>
-			<h1>[title]</h1>
+			<h1>Four Minutes in Heaven</h1>
 			<p>A data-driven look into dating and attraction</p>
 			<p>by Miles Pulsford</p>
 			<br>
@@ -30,7 +30,7 @@
 		<div id="main">
 			
 			<hr><br>
-			<h2>About the data</h2>
+			<h2>The data</h2>
 			<div id="text">
 				<p>From 2002-2004, two professors at Columbia Business School conducted experimental speed dating events. Attendees would sit down for a succession of four-minute dates with each participant of the opposite gender. After each date, participants rated their partner on six criteria and decided whether or not to "like" them. If two participants liked one another, they were given their partner's contact information so that they could follow up after the event.</p>
 				<p>Participants were also asked to fill out an extremely thorough survey, which contained questions about demographic information, dating habits, lifestyle information, romantic preferences, self-perception, and beliefs about the values of others. A similar survey was sent out the day after the event, as well as one month later.</p>
@@ -45,8 +45,8 @@
 			</div>
 			<img src="./images/age_chart.png">
 			<div id="text">
-				<p>As you can see, most of the speed daters were between the ages of 21 and 30. Women were slightly more likely to be in their early twenties, and there were more men in their late twenties and very early thirties. <i>(Note: two participants older than 40 have been omitted from this chart)</i>.</p><br>
-				<p>Next, we can examine the racial demographics of the speed dating pool:</p>
+				<p>Most of the speed daters were between the ages of 21 and 30. Women were slightly more likely to be in their early twenties, and there were more men in their late twenties and very early thirties. <i>(Note: two participants older than 40 have been omitted from this chart)</i>.</p><br>
+				<p>Next, we will examine the racial demographics of the speed dating pool:</p>
 			</div>
 			<img src="./images/race_chart.png">
 			<div id="text">
@@ -64,31 +64,36 @@
 			<h2>My analysis</h2>
 			<div id="text">
 				<p>When thinking about how to approach this project, I decided to stay away from the traditional topics of attraction research (racial bias, age preference, most attractive qualities, etc.). Instead, I wanted to look at some deeper questions, and see if I could make some progress toward answering them.</p>
-				<p><b>My first question: Are we more attracted to people who are attracted to us?</b></p>
-				<p>To tackle this problem, I compared the percentage of likes given to people who returned the favor with the percentage of likes that went unrequited. Here's what I found:
+				<p><b>1. Are we more (or less!) attracted to people who are attracted to us?</b></p>
+				<p>To approach this question, I compared the percentage of likes given to people who returned the favor with the percentage of likes that went unrequited. Here's what I found:
 			</div>
 			<img src="./images/mutual_chart.png">
 			<div id="text">
 				<p>Interestingly, it turns out that participants were slightly more likely to like the partners that did not like them back. I guess we just want what we can't have.</p><br>
-				<p>Next, I looked at selectivity. <b>Are attractive people more picky when choosing potential partners?</b></p>
-				<p>For this one, I examined the relationship between physical attractiveness and number of partners liked. To estimate attractiveness, I averaged the "Attractiveness" ratings that each participant received from their date partners. I plotted the result for each participant against the percentage of partners that they liked, and created this scatter plot:</p>
+				<p><b>2. Are attractive people more picky when choosing potential partners?</b></p>
+				<p>For this question, I examined the relationship between physical attractiveness and number of partners liked. To estimate attractiveness, I averaged the "Attractiveness" ratings that each participant received from their date partners. I plotted the result for each participant against the percentage of partners that they liked, and created this scatter plot:</p>
 			</div>
 			<img src="./images/pickiness_chart.png">
 			<div id="text">
 				<p>It seems that attractive people are indeed more selective with their likes. People who received an average attractiveness rating of 4 liked about 60% of their partners, while people who received an average rating of 7 liked only just over 30% of their dates. Interestingly, the curve levels off after 7; people ranked 8 or higher were no more selective.</p><br>
-				<p>Finally, I examined effort. <b>Does going on more dates correlate with more romantic success?</b></p>
+				<p><b>3. Does going on more dates correlate with more romantic success?</b></p>
 				<p>This is a big question, and one that could certainly use more research. For my analysis, I compared the self-reported frequency that participants go on dates with their success at the speed dating events. To assess success, I used average match percentage. Here's a chart of the average match percentage for each speed dater, separated by their dating frequency:</p>
 			</div>
 			<img src="./images/effort_chart.png">
 			<div id="text">
 				<p>I found a weak connection between dating frequency and success. Of course, there could be quite a few reasons for this correlation, and proving causation would be tricky. Perhaps people who are more desirable consistently have more dating success, and so they enjoy dating more and do it more often. Or perhaps dating is a skill, and people who practice more have better results.</p>
-				<p>One interesting thing about this chart is the outliers. While the median match percentage only rose slightly with date frequency, the highest outliers were almost entirely people who date more often. If you want to have a wildly successful love life, you might have to put in a lot of effort.</p><br>
+				<p>One of this chart's more interesting details is the outliers. While the median match percentage only rose slightly with date frequency, the participants with very high match percentages were almost exclusively people who date more often. If you want to have a wildly successful love life, you might have to put in a lot of effort.</p><br>
 			</div>
 			<br><hr><br>
 
 			<h2>Further study</h2>
 			<div id="text">
-				<p><i>Coming soon!</i></p><br>
+				<p>This dataset is quite comprehensive, and there is potential for a lot more interesting research. Here are some questions I'd like to work on:</p>
+				<p>1. What is the threshold average score for each attribute at which a participant has a 50% chance of receiving a like?</p>
+				<p>2. Can we predict the dating success of any individual, using any combination of data?</p>
+				<p>3. Is there a relationship between the qualities people possess and the ones they believe others find attractive?</p>
+				<p>4. Does where someone grew up affect any of their attribute rankings?</p>
+			<br>
 			</div>
 			<br><hr>
 		</div>
