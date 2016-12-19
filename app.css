@@ -2,6 +2,20 @@ body {
 	background-color: #114B5F;
 }
 
+section {
+	font-size: 14px;
+}
+
+header {
+	font-family: "Gill Sans MT";
+}
+
+em {
+    font-size: 18px;
+    font-style: normal;
+    text-decoration: underline;
+}
+
 div#sidebar {
 	width: 260px;
 	padding: 32px;
@@ -11,14 +25,6 @@ div#sidebar {
 	font-family: "Gill Sans MT";
 	float: left;
 	position: fixed;
-}
-
-section {
-	font-size: 18px;
-}
-
-header {
-	font-family: "Gill Sans MT";
 }
 
 div#all {
@@ -36,8 +42,16 @@ div#charts {
 	float: right;
 }
 
-
 img {
 	width: 100%;
 	margin-bottom: 3em;
 }
+
+a:link {
+    color: #7D9CA7;
+    text-decoration: none;
+
+}
+a:visited {
+    text-decoration: none;
+	color: #B88190;
