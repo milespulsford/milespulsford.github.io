@@ -2,22 +2,24 @@ body {
 	background-color: #114B5F;
 }
 
-div#header {
-	width: 960px;
-	padding: 32px;
+header {
+	width: 320px;
+	padding: 0px;
 	font-size: 20px;
 	color: #F5F3EE;
 	margin: auto;
 	font-family: "Gill Sans MT";
+	float: left;
 }
 
 div#charts {
-	width: 960px;
-	padding: 32px;
+	width: 630px;
+	padding: 0px;
 	background-color: #F5F3EE;
 	font-size: 16px;
 	margin: auto;
 	font-family: "Gill Sans MT";
+	float: right;
 }
 
 img {
