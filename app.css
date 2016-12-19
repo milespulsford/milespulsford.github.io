@@ -18,7 +18,7 @@ section {
 }
 
 header {
-	font-family: "Gill Sans MT", "Helvetica", sans-serif;
+	font-family: "Gill Sans MT", Arial, sans-serif;
 }
 
 div#sidebar {
@@ -27,7 +27,7 @@ div#sidebar {
 	font-size: 20px;
 	color: #F5F3EE;
 	margin: auto;
-	font-family: "Gill Sans MT", "Helvetica", sans-serif;
+	font-family: "Gill Sans MT", Arial, sans-serif;
 	float: left;
 	position: fixed;
 }
@@ -43,7 +43,7 @@ div#main {
 	background-color: #F5F3EE;
 	font-size: 16px;
 	margin: auto;
-	font-family: "Gill Sans MT", "Helvetica", sans-serif;
+	font-family: "Gill Sans MT", Arial, sans-serif;
 	float: right;
 }
 
@@ -53,7 +53,7 @@ div#text {
 	background-color: #F5F3EE;
 	font-size: 16px;
 	margin: auto;
-	font-family: "Gill Sans MT", "Helvetica", sans-serif;
+	font-family: "Gill Sans MT", Arial, sans-serif;
 }
 
 img {
